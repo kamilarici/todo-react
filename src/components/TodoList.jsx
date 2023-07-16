@@ -19,18 +19,19 @@ const TodoList = ({ todos, setTodos }) => {
           return (
             <div
               key={item.id}
-              className="task_card d-flex justify-content-between  align-items-center mt-2 bg-info border rounded-3"
+              className="task_card d-flex justify-content-between  align-items-center mt-2 bg-info border border-dark rounded-3 "
             >
               <input
                 onClick={() => handleCompleted(item.id)}
                 type="checkbox"
                 name=""
                 id={item.id}
+                className="ms-1"
               />
               <div className="mt-2">
                 <p className={item.completed ? "completed" : ""}>{item.text}</p>
               </div>
-              <span onClick={() => handleDelete(item.id)}>:🍗:</span>
+              <span onClick={() => handleDelete(item.id)}>❌</span>
             </div>
           );
         })}

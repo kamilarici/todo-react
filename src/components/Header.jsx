@@ -15,7 +15,7 @@ const Header = ({ setTodos, todos }) => {
 
   return (
     <div className="container text-center">
-      <h1 className="text-danger">Todo App</h1>
+      <h1 className="text-danger mt-5">Todo App</h1>
       <div className="row justify-content-center mt-5">
         <form onSubmit={handleSubmit} action="#" className="d-flex w-50 ">
           <input
@@ -27,7 +27,7 @@ const Header = ({ setTodos, todos }) => {
           <button
             disabled={!task.trim()}
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-primary ms-2"
           >
             Add
           </button>

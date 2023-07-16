@@ -1,4 +1,9 @@
 .completed {
   text-decoration: line-through;
-  opacity: 0.4;
+  opacity: 0.6;
+  color: red;
+}
+body {
+  background: linear-gradient(225deg, #2ea57b 0%, #efc77f 90%, #82b8de 100%);
+  background-attachment: fixed;
 }

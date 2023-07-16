@@ -7,3 +7,6 @@ body {
   background: linear-gradient(225deg, #bdc22c 0%, #bd91e4 90%, #82b8de 100%);
   background-attachment: fixed;
 }
+.c-box {
+  cursor: pointer;
+}

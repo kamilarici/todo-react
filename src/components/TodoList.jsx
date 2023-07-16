@@ -26,12 +26,14 @@ const TodoList = ({ todos, setTodos }) => {
                 type="checkbox"
                 name=""
                 id={item.id}
-                className="ms-1"
+                className="ms-1 c-box"
               />
               <div className="mt-2">
                 <p className={item.completed ? "completed" : ""}>{item.text}</p>
               </div>
-              <span onClick={() => handleDelete(item.id)}>❌</span>
+              <span className=" c-box" onClick={() => handleDelete(item.id)}>
+                ❌
+              </span>
             </div>
           );
         })}

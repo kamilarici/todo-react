@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const todolist = [
   {
     id: 1,
@@ -16,7 +16,14 @@ const todolist = [
 ];
 
 function App() {
-  const [todos, setTodos] = useState(todolist);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || todolist
+  );
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
   return (
     <div className="App text-center ">
       <Header setTodos={setTodos} todos={todos} />
